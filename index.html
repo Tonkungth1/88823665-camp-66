@@ -1,59 +1,78 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body style="text-align: center;">
-    <table>
-        <tr>
-        <td>First name:<br><input  type="text" id="fname" name="fname">
-        </td>
-        </tr>
-        <tr>
-            <td>Last name:<br><input type="text" id="lname" name="lname">
-            </td>
-        </tr>
-
-        <tr>
-            <td>วัน/เดือน/ปี :</td>
-            <td> <input type="date"></td>
-        </tr>
-
-        <tr>
-            <td>อายุ:</td>
-            <td><input type="text" id="lname" name="lname"></td>
-        </tr>
-        <tr>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Document</title>
+    </head>
+    <body >
+        <table>
+            <td> <h1>Workshop #HTML - FORM</h1></td>
             <td>
-            เพศ:
-            <input type="radio" id="html" name="male" value="male">
-           ชาย
-            <input type="radio" id="html" name="femalee" value="female">
-            หญิง
-            </td>
-        </tr> 
-        <tr>
-            <td>รูป</td>
-            <td><input type="file"></td>
-        </tr>
-        </tr> <tr>
-            <td>ที่อยู่</td>
-            <td></td>
-        </tr>
-        </tr> <tr>
-            <td>สิ่งที่ชอบ</td>
-            <td></td>
-        </tr>
-        </tr> <tr>
-            <td>แนวเพลงที่ชอบ</td>
-            <td></td>
-        </tr>
-        </tr> <tr>
-            <td>ยินยอมให้เก็บข้อมูล</td>
-            <td></td>
-        </tr>  
-    </table>
-</body>
+        <h1>Workshop #HTML - FORM</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>ชื่อ</td>
+                    <td><input type="Text" id="Name" name="Name"></td>
+                </tr>
+                <tr>
+                    <td>นามสกุล</td>
+                    <td><input type="Text" id="LastName" name="LastName"></td>
+                </tr>
+                <tr>
+                    <td>วัน/เดือน/ปีเกิด</td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td>อายุ</td>
+                    <td><input type="Text" id="Age" name="Age"></td>
+                </tr>
+                <tr>
+                    <td>เพศ</td>
+                    <td>
+                        <input type="radio" name="gender" value="male">ชาย
+                        <input type="radio" name="gender" value="female">หญิง
+                    </td>
+                </tr>
+                <tr>
+                    <td>รูป</td>
+                    <td><input type="file"></td>
+                </tr>
+                <tr>
+                    <td>ที่อยู่</td>
+                    <td><textarea rows="6" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td>สีที่ชอบ</td>
+                    <td>
+                        <select name="color">
+                            <option value="Red">สีแดง</option>
+                            <option value="Green">สีเขียว</option>
+                            <option value="Blue">สีน้ำเงิน</option>
+                            </select>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>แนวเพลงที่ชอบ</td>
+                    <td>
+                        <input type="radio" name="style_music" value="เพื่อชีวิต">เพื่อชีวิต
+                        <input type="radio" name="style_music" value="ลูกทุ่ง">ลูกทุ่ง
+                        <input type="radio" name="style_music" value="อื่น">อื่นๆ
+                    </td>
+                </tr>
+                <tr>
+                   
+                    <td> <input type="checkbox"  name="verify" value="check"> ยินยอมให้เก็บข้อมูล</td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="Reset"></td>
+                    <td><input type="button" value="Sumbit"></td>
+                </tr>
+            </table>
+        
+        </form>
+        </td>
+        </table>
+    </body>
 </html>
