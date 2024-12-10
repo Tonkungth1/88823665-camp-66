@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+.background-images{
+    background-image: url('./8406708.gif') ;
+    background-size:cover ;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.headtitle{
+    margin-left: 50vw;
+    margin-top: 15.2vh;
+    padding: 5 8 ;
+    display: flex;
+    position: absolute;
+    width:45vw;
+    height: 46vh;
+    background: rgba(60, 61, 65, 0.6);;
+    display: flex;
+    
+}
+.bg{
+    display: flex;
+    width: 100vw;
+    height: 2vh;
+    background-color:#272e32;
+    z-index: 1;
+}
+.head{
+    color: aliceblue;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 4%;
+    padding: 0.05vw 1vh;
+    font-size: 1.5vh;
+    font-weight: 400;
+    background-color: rgb(123, 123, 123);
+}
+.table{
+    width: 98%;
+    display: flex;
+    position: absolute;
+    max-height :45vh ;
+    max-width: 98vw;
+   overflow-y: scroll; 
+   box-sizing: border-box; 
+   padding: 4vh 0vh 0vh  2vw;
+   z-index: 0;
+}
+.table td{
+    color: rgb(255, 255, 255);
+    padding-top: 1vh;
+}
+input[type='Text']:hover,input[type='radio']:hover,input[type='date']:hover,input[type='file']:hover,input[type='number']:hover,select:hover,textarea:hover{
+    animation-name: input;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    background-color: rgb(255, 255, 255);
+}
+@keyframes input{
+    0%{background-color: rgb(255, 255, 255);}
+    100%{background-color: rgb(26, 59, 168);}
+}
+.table::-webkit-scrollbar {
+    width: 8px;
+;
+}
+
+.table::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.table::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.space{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    width: 50px;
+    opacity: 1; /* ซ่อนเริ่มต้น */
+    transition: transform 0.5s ease, opacity 0.5s initial;
+    z-index: 1;
+}
+.line-upload{
+    margin-top: -0.1vh;
+    position: absolute;
+    display:flex;
+    width: 20%;
+    min-height: 0.1cm;
+    background-color: rgb(229, 226, 21);
+    animation-name: example;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+}
+@keyframes example{
+    0%{width: 0%;}
+    100%{width: 20%;}
+}
+.box-type{
+    display: flex;
+    position: absolute;
+    width: 74%;
+    height: 8%;
+    top:10%;
+    background-color: #272e32;
+    z-index: -1;
+     opacity: 1;
+}
+.buttonstyle{
+    padding: 1vw 2vh;
+    background: linear-gradient(125deg, blue, pink);
+    border: none;
+    color : white;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.buttonstyle:hover{
+    animation-name: rotagebutton;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    rotate: 0;
+}
+@keyframes rotagebutton{
+    100%{rotate: 360deg;}
+}
+tr:hover{
+    margin: 0vh -0.5vw;
+    width: 74%;
+    height: 8%;
+    top:10%;
+    background-color: #272e32;
+}
