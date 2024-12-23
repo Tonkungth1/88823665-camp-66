@@ -5,13 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Document</title>
 
 </head>
-<body>
-     
-</body>
 
+<body>
+
+</body>
+<div class="container mt-5">
+    <form>
+      <!-- ชื่อ -->
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">ชื่อ <label class="text-danger">*</label></label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="กรอกชื่อของคุณ">
+        </div>
+      </div>
+      <!-- สกุล -->
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">สกุล</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" ">
+        </div>
+      </div>
+      <!-- วันเกิด -->
+       <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">วัน/เดือน/ปีเกิด</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control">
+        </div>
+        </div>
+        <!-- อายุ -->
+         <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">อายุ</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control">
+         </div>
+       </div>
+       <!-- เพศ -->
+       <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">เพศ</label>
+        <div class="col-sm-10 ">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="group" >
+                <label class="form-check-label">ชาย</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="group">
+                <label class="form-check-label" >
+                  Default checked radio
+                </label>
+              </div>
+        </div>
+       </div>
+       <!-- รูป -->
+       <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">รูป</label>
+        <div class="col-sm-10">
+            <input type="file" class="form-control">
+     </div>
+   </div>
+    <!-- ที่อยู่ -->
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">ที่อยู่</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="6"></textarea>
+     </div>
+   </div>
+    <!-- อายุ -->
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">อายุ</label>
+        <div class="col-sm-10">
+            <select class="form-select">
+                <option selected>สีแดง</option>
+                <option value="1">สีเขียว</option>
+                <option value="2">สีน้ำเงิน</option>
+              </select>
+     </div>
+   </div>
+     <!-- เพลง -->
+     <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">เพลง</label>
+        <div class="col-sm-10 ">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="group" >
+                <label class="form-check-label">ชาย</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="group">
+                <label class="form-check-label" >
+                  Default checked radio
+                </label>
+              </div>
+        </div>
+       </div>
+      </form>
 </html>
