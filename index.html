@@ -18,90 +18,107 @@
 </body>
 <div class="container mt-5">
     <form>
-      <!-- ชื่อ -->
-      <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">ชื่อ <label class="text-danger">*</label></label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" placeholder="กรอกชื่อของคุณ">
+        <!-- ชื่อ -->
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">ชื่อ <label class="text-danger">*</label></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="กรอกชื่อของคุณ">
+            </div>
         </div>
-      </div>
-      <!-- สกุล -->
-      <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">สกุล</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" ">
+        <!-- สกุล -->
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">สกุล</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" ">
         </div>
       </div>
       <!-- วันเกิด -->
-       <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">วัน/เดือน/ปีเกิด</label>
-        <div class="col-sm-10">
-            <input type="date" class="form-control">
+       <div class=" row mb-3">
+                <label class="col-sm-2 col-form-label">วัน/เดือน/ปีเกิด</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <!-- อายุ -->
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">อายุ</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control">
+                </div>
+            </div>
+            <!-- เพศ -->
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">เพศ</label>
+                <div class="col-sm-10 ">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="group">
+                        <label class="form-check-label">ชาย</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="group">
+                        <label class="form-check-label">หญิง</label>
+                    </div>
+                </div>
+            </div>
+        <!-- รูป -->
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">รูป</label>
+            <div class="col-sm-10">
+                <input type="file" class="form-control">
+            </div>
         </div>
+        <!-- ที่อยู่ -->
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">ที่อยู่</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="6"></textarea>
+            </div>
         </div>
         <!-- อายุ -->
-         <div class="row mb-3">
+        <div class="row mb-3">
             <label class="col-sm-2 col-form-label">อายุ</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control">
-         </div>
-       </div>
-       <!-- เพศ -->
-       <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">เพศ</label>
-        <div class="col-sm-10 ">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="group" >
-                <label class="form-check-label">ชาย</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="group">
-                <label class="form-check-label" >
-                  Default checked radio
-                </label>
-              </div>
+                <select class="form-select">
+                    <option selected>สีแดง</option>
+                    <option value="1">สีเขียว</option>
+                    <option value="2">สีน้ำเงิน</option>
+                </select>
+            </div>
         </div>
-       </div>
-       <!-- รูป -->
-       <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">รูป</label>
-        <div class="col-sm-10">
-            <input type="file" class="form-control">
-     </div>
-   </div>
-    <!-- ที่อยู่ -->
-    <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">ที่อยู่</label>
-        <div class="col-sm-10">
-            <textarea class="form-control" rows="6"></textarea>
-     </div>
-   </div>
-    <!-- อายุ -->
-    <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">อายุ</label>
-        <div class="col-sm-10">
-            <select class="form-select">
-                <option selected>สีแดง</option>
-                <option value="1">สีเขียว</option>
-                <option value="2">สีน้ำเงิน</option>
-              </select>
-     </div>
-   </div>
-     <!-- เพลง -->
-     <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">เพลง</label>
-        <div class="col-sm-10 ">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="group" >
-                <label class="form-check-label">ชาย</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="group">
-                <label class="form-check-label" >
-                  Default checked radio
-                </label>
-              </div>
+        <!-- เพลง -->
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">เพลง</label>
+            <div class="col-sm-10 ">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="group_music">
+
+                    <label class="form-check-label">เพื่อชีวิต</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="group_music">
+                    <label class="form-check-label">ลูกทุ่ง</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="group_music">
+                    <label class="form-check-label">
+                        อื่นๆ
+                    </label>
+                </div>
+            </div>
         </div>
-       </div>
-      </form>
+        <div class="row mb-3">
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input">
+                <label class="form-check-label">Check me out</label>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="d-flex justify-content-between">
+              <button type="reset" class="btn btn-secondary">Reset</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>          
+    </form>
+</div>
+
 </html>
