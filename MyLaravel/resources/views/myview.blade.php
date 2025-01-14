@@ -15,7 +15,7 @@
     
         <div class="card shadow mt-5 mx-auto" >
             <div class="card-body">
-                <h2 class="text-center mb-4">Multiplication Table Generator1</h2>
+                <h2 class="text-center mb-4">Multiplication Table Generator</h2>
                 <form action = "{{url('/mylaravel')}}" method = "post">
                   @csrf
                     <div class="mb-3">
