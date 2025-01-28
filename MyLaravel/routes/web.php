@@ -5,13 +5,21 @@ use App\Http\Controllers\MyController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
-Route::get('/', function () {
-    return view('layouts.default');
-});
-Route ::get('/hello', function () {
-    return "<h1>hi<h1>";;
-});
-Route::get('/mylaravel/{id?}',[Mycontroller::class,'myfunction']);
+use App\Http\Controllers\UserController;
 
+Route::get('/mylaravel/{id?}',[Mycontroller::class,'myfunction']);
 Route::post('/mylaravel/{id?}',[Mycontroller::class,'myfunction']);
+
+Route::match(['get', 'post'], '/', [HomeController::class, 'index']);
+Route::match(['get', 'post'], '/home', [HomeController::class, 'index']);
+
+Route::get('/user',  [UserController::class,'index']);
+
+Route::get('/register',  [RegisterController::class,'index']);
+Route::post('/register',  [RegisterController::class,'create']);
+
+
 Route::get('/login',  [LoginController::class,'index']);
+Route::post('/login',  [LoginController::class,'index']);
+
+
