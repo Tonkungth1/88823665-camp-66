@@ -23,3 +23,7 @@ Route::get('/login',  [LoginController::class,'index']);
 Route::post('/login',  [LoginController::class,'index']);
 
 
+
+Route::get('/user/{id}',  [UserController::class,'edit']);
+Route::put('/user' ,[UserController::class, 'edit_user']);
+Route::delete('/user',[UserController::class, 'delete']);
