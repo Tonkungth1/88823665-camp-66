@@ -10,8 +10,10 @@ use App\Http\Controllers\UserController;
 Route::get('/mylaravel/{id?}',[Mycontroller::class,'myfunction']);
 Route::post('/mylaravel/{id?}',[Mycontroller::class,'myfunction']);
 
-Route::match(['get', 'post'], '/', [HomeController::class, 'index']);
-Route::match(['get', 'post'], '/home', [HomeController::class, 'index']);
+Route::get( '/', [HomeController::class, 'index']);
+Route::post('/', [HomeController::class, 'index']);
+Route::get( '/home', [HomeController::class, 'index']);
+Route::post('/home', [HomeController::class, 'index']);
 
 Route::get('/user',  [UserController::class,'index']);
 

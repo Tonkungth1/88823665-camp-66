@@ -37,14 +37,14 @@
             <!-- /.col -->
             <div class="col-4">
               <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Sign In</button>
+                <button type="submit" class="btn btn-primary">Sign up</button>
               </div>
             </div>
             <!-- /.col -->
           </div>
           <!--end::Row-->
         </form>
-        <!-- /.social-auth-links -->
+          <!-- /.social-auth-links -->
         <p class="mb-0">
           <a href="login.html" class="text-center"> I already have a membership </a>
         </p>
