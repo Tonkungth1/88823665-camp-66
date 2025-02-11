@@ -74,7 +74,7 @@ function checkname() {
     }
   }
     function checkemail() {
-    let email = $('#email').val().trim(); 
+    let email = $('#email').val(); 
     let emailcorrect = /^[a-zA-Z0-9+-_%.]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,}$/;
     if (emailcorrect.test(email)) {
           $('#email').removeClass('is-invalid').addClass('is-valid'); 
@@ -86,7 +86,7 @@ function checkname() {
   }
     function checkpassword() {
     let passwordcorrect = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])[a-zA-Z0-9+-_%.]{8,}$/;
-    let password = $('#password').val().trim(); 
+    let password = $('#password').val(); 
     if (passwordcorrect.test(password)) {
         $('#password').removeClass('is-invalid').addClass('is-valid'); 
         return true;
@@ -100,14 +100,16 @@ function checkname() {
       let checkbox = document.getElementById("flexCheckDefault").checked;
      let confirm =  checkname() &&checkemail() &&checkpassword() && checkbox ;
      let nametitle = confirm ? "Success" : "Error",
-         nametext = confirm ? "thank you for register" : "please verify all",
+         nametext = !checkname()?"please input name ":!checkemail()?"please input email ":!checkpassword()?"please input password ":confirm ? "thank you for register" : "please verify all",
          typeicon = confirm ? "success" : "error";
       swal.fire({
         title:nametitle,
         text : nametext,
         icon:typeicon
       })
-      confirm?
+     if(confirm){
+      event.target.submit();
+     }
     }
   
 </script>
