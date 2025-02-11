@@ -10,19 +10,25 @@
     <div class="card">
       <div class="card-body register-card-body">
         <p class="register-box-msg">Register a new membership</p>
-        <form action="{{url('/register')}}"onsubmit = "" method="post">
+        <form action="{{url('/register')}}"onsubmit = "return allcheck(event)" method="post">
           @csrf
           <div class="input-group mb-3">
-            <input type="text" name="name"id = "name"class="form-control" placeholder="Full Name" />
+            <input type="text" name="name"id = "name"class="form-control" placeholder="Full Name" oninput = "checkname()"/>
             <div class="input-group-text"><span class="bi bi-person"></span></div>
+            <div class="valid-feedback">ถูกต้อง</div>
+            <div class="invalid-feedback">กรุณาระบบข้อมูล ชื่อ-สกุล</div>
           </div>
           <div class="input-group mb-3">
-            <input type="email" name="email" id= "email"class="form-control" placeholder="Email" />
+            <input type="email" name="email" id= "email"class="form-control" placeholder="Email" oninput = "checkemail()"/>
             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+            <div class="valid-feedback">อีเมลถูกต้อง</div>
+            <div class="invalid-feedback">กรุณากรอกอีเมลให้ถูกต้อง</div>
           </div>
           <div class="input-group mb-3">
-            <input type="password"name = "password" id= "password"class="form-control" placeholder="Password" />
+            <input type="password"name = "password" id= "password"class="form-control" placeholder="Password"oninput = "checkpassword()" />
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+            <div class="valid-feedback">ok</div>
+            <div class="invalid-feedback">กรุณาระบบข้อมูล ชื่อ-สกุล</div>
           </div>
           <!--begin::Row-->
           <div class="row">
@@ -30,6 +36,7 @@
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                 <label class="form-check-label" for="flexCheckDefault">
+                  
                   I agree to the <a href="#">terms</a>
                 </label>
               </div>
@@ -45,9 +52,6 @@
           <!--end::Row-->
         </form>
           <!-- /.social-auth-links -->
-        <p class="mb-0">
-          <a href="login.html" class="text-center"> I already have a membership </a>
-        </p>
       </div>
       <!-- /.register-card-body -->
     </div>
@@ -58,11 +62,53 @@
 
 @section('scripts')
 <script>  
-  console.log('Hello world');
-  function clickme(){
-    // $('#name').val('hello')
-    $('#name').addClass('is-valid')
-    return true;
+
+function checkname() {
+    let name = $('#name').val().trim(); 
+    if (name !== "" && name.length>=3) {
+        $('#name').removeClass('is-invalid').addClass('is-valid'); 
+        return true;
+    } else {
+        $('#name').removeClass('is-valid').addClass('is-invalid'); 
+        return false;
+    }
   }
+    function checkemail() {
+    let email = $('#email').val().trim(); 
+    let emailcorrect = /^[a-zA-Z0-9+-_%.]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9]{2,}$/;
+    if (emailcorrect.test(email)) {
+          $('#email').removeClass('is-invalid').addClass('is-valid'); 
+          return true;
+    } else {
+        $('#email').removeClass('is-valid').addClass('is-invalid'); 
+        return false;
+    }
+  }
+    function checkpassword() {
+    let passwordcorrect = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])[a-zA-Z0-9+-_%.]{8,}$/;
+    let password = $('#password').val().trim(); 
+    if (passwordcorrect.test(password)) {
+        $('#password').removeClass('is-invalid').addClass('is-valid'); 
+        return true;
+    } else {
+        $('#password').removeClass('is-valid').addClass('is-invalid'); 
+        return false;
+    }
+  }
+    function allcheck(event){
+      event.preventDefault();
+      let checkbox = document.getElementById("flexCheckDefault").checked;
+     let confirm =  checkname() &&checkemail() &&checkpassword() && checkbox ;
+     let nametitle = confirm ? "Success" : "Error",
+         nametext = confirm ? "thank you for register" : "please verify all",
+         typeicon = confirm ? "success" : "error";
+      swal.fire({
+        title:nametitle,
+        text : nametext,
+        icon:typeicon
+      })
+      confirm?
+    }
+  
 </script>
 @endsection
