@@ -27,8 +27,8 @@
           <div class="input-group mb-3">
             <input type="password"name = "password" id= "password"class="form-control" placeholder="Password"oninput = "checkpassword()" />
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
-            <div class="valid-feedback">ok</div>
-            <div class="invalid-feedback">กรุณาระบบข้อมูล ชื่อ-สกุล</div>
+            <div class="valid-feedback">ถูกต้อง</div>
+            <div class="invalid-feedback">กรุณากรอกรหัสผ่านให้ถูกต้อง</div>
           </div>
           <!--begin::Row-->
           <div class="row">
