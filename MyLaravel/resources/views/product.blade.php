@@ -27,7 +27,7 @@
                 <td>#</td>
                 <td>Category Name</td>
                 <td>Product Name</td>
-                <td>User Name</td>
+                <td>User </td>
             </tr>
         </thead>
         <tbody>
