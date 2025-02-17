@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use  App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -14,14 +14,12 @@ class LoginController extends Controller
       $user =  User::where('email',$req->email)->first();
        if( Hash::check($req->password,$user -> password)){
         session()->forget('error');
-        session(['user'=>$user]);
-        return redirect("/");
+        session(['user' =>$user]);
+        return redirect("/user");
        }
        else{
-        
         session(['error'=>'ข้อมูลการเข้าสู่ระบบไม่ถูกต้อง']);
-        // return view("login",['email'=> $req->email]);
-        return redirect("/login");
+        return view("/login",['email'=>$req->email]);
        }
         // return redirect("/");
     }
