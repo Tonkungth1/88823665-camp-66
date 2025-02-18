@@ -33,7 +33,7 @@ Route::get('/user/{id}',  [UserController::class,'edit']);
 Route::put('/user' ,[UserController::class, 'edit_user']);
 Route::delete('/user',[UserController::class, 'delete']);
 
-Route::get('/login',function(){
+Route::get('/logout',function(){
     session()->forget('user');
     session()->flush();
 return redirect('/login');
