@@ -19,7 +19,7 @@ class CheckLogin
         if(!isset($user)){
             return redirect("/login");
         }
-        
+
         return $next($request);
     }
 }

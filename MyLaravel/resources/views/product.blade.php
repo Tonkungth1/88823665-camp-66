@@ -673,15 +673,17 @@
                                 <td>{{$index + 1}}</td>
                                 <td>{{$category->name}}</td>
                                 <td>
-                                <?php    foreach ($products->where('category_id', $category->id) as $product) { 
-                                    $name  = $user->where('id',$product->user_id)->first();
+                                <?php    
+                                $name= '';
+                                foreach ($products->where('category_id', $category->id) as $product) { 
+                                    $name  = $user->where('id',$product->user_id)->first()->name;
                                     ?>
                                     <ul>
                                         <li>{{$product->name}}</li>
                                     </ul>
                                     <?php } ?>
                                 </td>
-                                <td>{{$name->name}}</td>
+                                <td>{{$name}}</td>
                             </tr>
                             <?php }?>
                         </tbody>
