@@ -16,7 +16,7 @@ Route::post('/mylaravel/{id?}',[Mycontroller::class,'myfunction']);
 Route::get( '/', [HomeController::class, 'index']);
 Route::post('/', [HomeController::class, 'index']);
 Route::get( '/home', [HomeController::class, 'index']);
-Route::post('/home', [HomeController::class, 'index']);
+Route::post('/home', [HomeController::class, 'index'])->middleware([CheckLogin::class,]);
 
 Route::get('/user',  [UserController::class,'index']);
 
@@ -32,3 +32,9 @@ Route::post('/login',  [LoginController::class,'login']);
 Route::get('/user/{id}',  [UserController::class,'edit']);
 Route::put('/user' ,[UserController::class, 'edit_user']);
 Route::delete('/user',[UserController::class, 'delete']);
+
+Route::get('/login',function(){
+    session()->forget('user');
+    session()->flush();
+return redirect('/login');
+});
